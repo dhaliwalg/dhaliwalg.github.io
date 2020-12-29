@@ -152,7 +152,9 @@ nav {
  }
   nav ul {
     list-style: none;
-    overflow: hidden; }
+    overflow: hidden; 
+    margin-right: -350px;
+}
   nav ul li {
     float: left;
     width: 20%; }
