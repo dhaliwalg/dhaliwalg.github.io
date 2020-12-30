@@ -81,9 +81,9 @@ body {
       .stage { -webkit-transform:scale(0.85); transform:scale(0.85); margin-right:120px; }
   }
 
-  img {
+  /* img {
     border-radius: 50%;
-  }
+  } */
 
   .fa {
     padding: 20px;
