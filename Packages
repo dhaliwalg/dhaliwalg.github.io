@@ -4,7 +4,7 @@ Section: Tweaks
 Maintainer: vapor <dhaliwalgurjit022@gmail.com>
 Depends: firmware (>=13.0), mobilesubstrate
 Architecture: iphoneos-arm
-Filename: /debs/com.watervapor.nodock
+Filename: /debs/com.watervapor.nodock.deb
 Size: 4098 
 MD5sum: 5edde00eef111d6996b976106c48c0a9
 SHA1: e5d8ec5e72ef6e6cac5aeddc9ac185c261ce1869
