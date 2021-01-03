@@ -7,8 +7,8 @@ Architecture: iphoneos-arm
 Filename: ./debs/com.watervapor.nodock
 Size: 4098 
 MD5sum: 5edde00eef111d6996b976106c48c0a9
-SHA1: 
-SHA256:
+SHA1: e5d8ec5e72ef6e6cac5aeddc9ac185c261ce1869
+SHA256: 66a6a09bf0016df9026fa77369b74d892868e4c357ea50fc88bafe8be119f109
 Description: Hides the dock by setting opacity to 0. Super lightweight.
 Name: NoDock
 Author: vapor <dhaliwalgurjit022@gmail.com>
