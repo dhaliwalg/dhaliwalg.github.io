@@ -2,12 +2,14 @@ Package: com.watervapor.nodock
 Version: 0.0.1
 Section: Tweaks
 Maintainer: vapor <dhaliwalgurjit022@gmail.com>
-Depends: firmware (>7.0), mobilesubstrate
+Depends: firmware (>13.0), mobilesubstrate
 Architecture: iphoneos-arm
-Filename: /debs/com.watervapor.nodock
+Filename: ./debs/com.watervapor.nodock
 Size: 4098 
 MD5sum: 5edde00eef111d6996b976106c48c0a9
-Description: NoDock. Versions below 13.7 should work.
+SHA1: 
+SHA256:
+Description: Hides the dock by setting opacity to 0. Super lightweight.
 Name: NoDock
 Author: vapor <dhaliwalgurjit022@gmail.com>
 Depiction: 
