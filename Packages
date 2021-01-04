@@ -2,7 +2,7 @@ Package: com.watervapor.nodock
 Version: 0.0.1
 Section: Tweaks
 Maintainer: vapor <dhaliwalgurjit022@gmail.com>
-Depends: firmware (>=13.0), mobilesubstrate
+Depends: firmware (>=13.0)
 Architecture: iphoneos-arm
 Filename: /debs/com.watervapor.nodock.deb
 Size: 4098 
