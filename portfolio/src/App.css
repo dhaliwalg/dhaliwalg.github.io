@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+.App {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.App-logo {
+  margin-top: 0px;
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 50%;
+  border: slateblue 5px solid;
+  position: relative;
+  z-index: 1;
+}
+
+.particles{
+  z-index: -1;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.typer{
+  position: relative;
+  margin-top: -150px;
+  align-self: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 36px;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+
+.footerbar{
+  color: whitesmoke;
+  margin-top: 50px;
+  opacity: 50%;
+}
