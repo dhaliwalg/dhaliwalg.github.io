@@ -162,7 +162,7 @@ const ParticlesComponent = () => {
                         "type": "images",
                         "options": {
                             "images": {
-                                "src": "https://raw.githubusercontent.com/dhaliwalg/dhaliwalg.github.io/fc080d49012ee8d89eb8203e54be786a1f02f43d/site/thrownpng.png",
+                                "src": "https://raw.githubusercontent.com/dhaliwalg/dhaliwal.github.io/master/oldsite/thrownpng.png",
                                 "width": 400,
                                 "height": 534
                             }

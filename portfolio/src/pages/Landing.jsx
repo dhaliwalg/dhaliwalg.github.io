@@ -10,7 +10,7 @@ class Landing extends Component {
             <div className="App">
 
                 <header className="App-header">
-                    <ImageFadeIn opacityTransition='5' src='https://raw.githubusercontent.com/dhaliwalg/dhaliwalg.github.io/master/site/profpic.jpg' className="App-logo" alt="logo" />
+                    <ImageFadeIn opacityTransition='5' src='https://raw.githubusercontent.com/dhaliwalg/dhaliwal.github.io/master/oldsite/profpic.jpg' className="App-logo" alt="logo" />
                 </header>
 
                 <div className='typer'>
