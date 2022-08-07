@@ -16,7 +16,6 @@ class Landing extends Component {
                 <div className='typer'>
                     <Typewriter onInit={(typewriter) => {
                         typewriter
-
                             .typeString("hi i'm gurjit")
                             .pauseFor(4000)
                             .typeString(" ਗੁਰਜੀਤ")

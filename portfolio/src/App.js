@@ -2,7 +2,7 @@ import './App.css';
 
 import Landing from './pages/Landing';
 import { NaviBarComponent } from './components/NavigationBar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Classes from './pages/Classes';
 import Projects from './pages/Projects';
 import About from './pages/About';
