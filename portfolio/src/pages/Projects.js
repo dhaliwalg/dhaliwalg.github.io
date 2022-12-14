@@ -31,7 +31,7 @@ class Classes extends Component {
                     <Card.Text>
                       an android application similar to fiverr, where students and companies can connect and fulfill jobs.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button href="https://github.com/MichaelG922/Smarternships" variant="primary">Let's see it!</Button>
                   </Card.Body>
                 </Card>
               </Item>
@@ -61,7 +61,7 @@ class Classes extends Component {
                     <Card.Text>
                       a personal passion for reverse-engineering and injecting 3rd party code to add functionality to jailbroken iOS firmwares.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button href="https://github.com/dhaliwalg/tweaks" variant="primary">Let's see it!</Button>
                   </Card.Body>
                 </Card>
               </Item>
