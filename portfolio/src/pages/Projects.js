@@ -46,7 +46,7 @@ class Classes extends Component {
                     <Card.Text>
                       an exploratory analysis of all valorant professional matches from launch until may 2021 with machine learning.
                     </Card.Text>
-                    <Button href="/valproject" variant="primary">Go somewhere</Button>
+                    <Button href="https://dhaliwalg.github.io/320finalproj/" variant="primary">Let's see it!</Button>
                   </Card.Body>
                 </Card>
               </Item>
