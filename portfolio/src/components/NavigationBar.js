@@ -19,7 +19,6 @@ class NaviBarComponent extends React.Component {
                 />
               </Navbar.Brand>
               <Nav className="ml-auto">
-                  <Nav.Link href="/classes">classes</Nav.Link>
                   <Nav.Link href="/projects">projects</Nav.Link>
                   <Nav.Link href="/about">about</Nav.Link>
               </Nav>

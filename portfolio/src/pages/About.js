@@ -5,7 +5,10 @@ class About extends Component{
     render(){
         return(
             <div className="App-header">
-                <p>aboot</p>
+                <p>name's gurjit</p>
+                <p>wrote some phil papers (link them)</p>
+                <p>interests?</p>
+                <p>photos</p>
                 <FooterBar/>
             </div>
         )
