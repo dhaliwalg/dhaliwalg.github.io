@@ -40,7 +40,7 @@ class Classes extends Component {
             <Grid item xs={3}>
             <Item>
               <Card>
-                  <Card.Img variant="top" src="https://pbs.twimg.com/profile_images/1582355695717871618/Fn1gmFzT_400x400.jpg" />
+                  <Card.Img variant="top" src="https://preview.redd.it/mn3yrpc10t761.png?width=1000&format=png&auto=webp&v=enabled&s=4ee098c367a492c85c20023c46ef5aeb47457865" />
                   <Card.Body>
                     <Card.Title>data science final</Card.Title>
                     <Card.Text>
