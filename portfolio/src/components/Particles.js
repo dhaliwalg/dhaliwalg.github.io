@@ -163,8 +163,10 @@ const ParticlesComponent = () => {
                         "options": {
                             "images": {
                                 "src": "https://raw.githubusercontent.com/dhaliwalg/dhaliwal.github.io/master/oldsite/thrownpng.png",
-                                "width": 400,
-                                "height": 534
+                                "width": 500,
+                                "height": 634
+
+                                //add gaurav face?
                             }
                         }
                     },
