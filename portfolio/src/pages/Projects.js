@@ -21,11 +21,11 @@ class Classes extends Component {
       <div className="App-header">
         <div className="grid">
           <Grid container spacing={12}>
-            
+
             <Grid item xs={3}>
               <Item>
-                <Card > 
-                  <Card.Img variant="top" src='https://raw.githubusercontent.com/MichaelG922/Smarternships/main/new_logo.png'/>
+                <Card >
+                  <Card.Img variant="top" src='https://raw.githubusercontent.com/MichaelG922/Smarternships/main/new_logo.png' />
                   <Card.Body>
                     <Card.Title>smarternships</Card.Title>
                     <Card.Text>
@@ -38,8 +38,8 @@ class Classes extends Component {
             </Grid>
 
             <Grid item xs={3}>
-            <Item>
-              <Card>
+              <Item>
+                <Card>
                   <Card.Img variant="top" src="https://preview.redd.it/shpmpl91zk761.png?width=1000&format=png&auto=webp&s=9cfd77d2b414ae91725379294b7ab6370238e409" />
                   <Card.Body>
                     <Card.Title>data science final</Card.Title>
@@ -53,9 +53,9 @@ class Classes extends Component {
             </Grid>
 
             <Grid item xs={3}>
-            <Item>
-              <Card className='jb_card'>
-                  <Card.Img variant="top" src="https://raw.githubusercontent.com/dhaliwalg/dhaliwalg.github.io/master/CydiaIcon.png"/>
+              <Item>
+                <Card className='jb_card'>
+                  <Card.Img variant="top" src="https://raw.githubusercontent.com/dhaliwalg/dhaliwalg.github.io/master/CydiaIcon.png" />
                   <Card.Body>
                     <Card.Title>ios jailbreak development</Card.Title>
                     <Card.Text>
@@ -66,7 +66,9 @@ class Classes extends Component {
                 </Card>
               </Item>
             </Grid>
+
           </Grid>
+
         </div>
         <p className="text">more projects on the way 😀</p>
       </div>

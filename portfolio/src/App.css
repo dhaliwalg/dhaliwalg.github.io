@@ -53,11 +53,16 @@
   color: whitesmoke;
   font-size: medium;
   text-align: right;
-  margin-left: 25%;
+  margin-left: 10%;
   padding-top: 4%;
+
 }
 
 .pics {
   align-items: center;
+  z-index: 1;
+}
+
+.video {
   z-index: 1;
 }
