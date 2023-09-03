@@ -17,11 +17,12 @@ class Landing extends Component {
                     <Typewriter onInit={(typewriter) => {
                         typewriter
                             .typeString("hi i'm gurjit")
-                            .pauseFor(4000)
-                            .typeString(" ਗੁਰਜੀਤ")
-                            .pauseFor(3000)
+                            .pauseFor(8000)
                             .deleteAll()
-                            .typeString("striving to set an example for the sikh youth")
+                            .typeString("take a look around")
+                            .pauseFor(5000)
+                            .deleteAll()
+                            .typeString("webpage built on react + typescript")
                             .start();
                     }}
                     />

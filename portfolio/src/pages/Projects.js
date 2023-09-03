@@ -29,7 +29,7 @@ class Classes extends Component {
                   <Card.Body>
                     <Card.Title>smarternships</Card.Title>
                     <Card.Text>
-                      an android application similar to fiverr, where students and companies can connect and fulfill jobs.
+                      an android application written in kotlin. similar to fiverr, where students and companies can connect and fulfill jobs.
                     </Card.Text>
                     <Button href="https://github.com/MichaelG922/Smarternships" variant="primary">Let's see it!</Button>
                   </Card.Body>
@@ -44,7 +44,7 @@ class Classes extends Component {
                   <Card.Body>
                     <Card.Title>data science final</Card.Title>
                     <Card.Text>
-                      an exploratory analysis of all valorant professional matches from launch until may 2021 with machine learning.
+                      an exploratory analysis in python of all valorant professional matches from launch until may 2021 with machine learning.
                     </Card.Text>
                     <Button href="https://dhaliwalg.github.io/320finalproj/" variant="primary">Let's see it!</Button>
                   </Card.Body>
@@ -59,7 +59,7 @@ class Classes extends Component {
                   <Card.Body>
                     <Card.Title>ios jailbreak development</Card.Title>
                     <Card.Text>
-                      a personal passion for reverse-engineering and injecting 3rd party code to add functionality to jailbroken iOS firmwares.
+                      a personal passion for reverse-engineering and injecting 3rd party code in obj-c to add functionality to jailbroken iOS firmwares.
                     </Card.Text>
                     <Button href="https://github.com/dhaliwalg/tweaks" variant="primary">Let's see it!</Button>
                   </Card.Body>
