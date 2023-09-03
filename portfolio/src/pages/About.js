@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { FooterBar } from "../components/FooterBar";
-import pic1 from './pic1.jpg'
-import pic2 from './pic2.jpg'
-import pic3 from './pic3.JPG'
+import pic1 from './imgs/pic1.jpg'
+import pic2 from './imgs/pic2.jpg'
+import pic3 from './imgs/pic3.JPG'
 
 class About extends Component {
     render() {

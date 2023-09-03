@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImageFadeIn from "react-image-fade-in";
 import Typewriter from "typewriter-effect";
+import pfp from './imgs/option2.jpg';
 
 import { FooterBar } from '../components/FooterBar';
 
@@ -10,7 +11,7 @@ class Landing extends Component {
             <div className="App">
 
                 <header className="App-header">
-                    <ImageFadeIn opacityTransition='5' src='https://raw.githubusercontent.com/dhaliwalg/dhaliwal.github.io/master/oldsite/profpic.jpg' className="App-logo" alt="logo" />
+                    <ImageFadeIn opacityTransition='5' src={pfp} className="App-logo" alt="logo" />
                 </header>
 
                 <div className='typer'>

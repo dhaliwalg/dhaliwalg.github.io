@@ -7,10 +7,10 @@
 
 .App-logo {
   margin-top: 0px;
-  height: 40vmin;
+  height: 45vmin;
   pointer-events: none;
   border-radius: 50%;
-  border: slateblue 5px solid;
+  border: #e2474b 5px solid;
   position: relative;
   z-index: 1;
 }
