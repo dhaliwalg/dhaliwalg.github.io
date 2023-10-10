@@ -1,6 +1,5 @@
 import '../App.css';
 import React from "react";
-import { AiOutlineApple } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { FiBox, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
