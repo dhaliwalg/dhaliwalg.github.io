@@ -20,7 +20,7 @@ class Classes extends Component {
     return (
       <div className="App-header">
         <div className="grid">
-          <MDBRow style={{ padding: '2.5vmax', maxHeight: '100vh', overflow: 'auto' }}>
+          <MDBRow style={{ padding: '6.3vmin', maxHeight: '100vh', overflow: 'auto' }}>
             <MDBCol md='3'>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea href="https://github.com/MichaelG922/Smarternships" target="_blank">
