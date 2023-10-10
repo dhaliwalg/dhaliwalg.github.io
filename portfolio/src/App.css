@@ -49,18 +49,11 @@
   opacity: 25%;
 }
 
-.aboot {
-  color: whitesmoke;
-  font-size: 1vmin;
-  text-align: right;
-  margin-left: 10%;
-  padding-top: 4%;
-
-}
-
 .pics {
+  position: fixed;
   align-items: center;
   z-index: 1;
+  margin-top: 7vmin;
 }
 
 .video {

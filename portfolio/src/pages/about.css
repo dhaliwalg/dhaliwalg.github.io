@@ -1,0 +1,25 @@
+.App {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.aboot {
+    color: whitesmoke;
+    margin-top: 29vmin;
+    margin-right: 2vmin;
+    font-size: 2.5vmin;
+    text-align: right;
+    z-index: 1;
+}
+
+.pics {
+    margin-top: 10vmin;
+    margin-left: 12vmin;
+    /* padding-left: 12vmin; */
+    clip-path: circle();
+}
