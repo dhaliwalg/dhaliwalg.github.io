@@ -6,8 +6,7 @@
 }
 
 .App-logo {
-  margin-top: 0px;
-  height: 45vmin;
+  height: 42vmin;
   pointer-events: none;
   border-radius: 50%;
   border: #e2474b 5px solid;
@@ -21,7 +20,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,10 +32,10 @@
 
 .typer {
   position: relative;
-  margin-top: -150px;
+  margin-top: -12vmax;
   align-self: center;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 36px;
+  font-size: 2.5vmax;
   color: whitesmoke;
   z-index: 1;
 }
@@ -44,14 +43,13 @@
 
 .footerbar {
   color: whitesmoke;
-  margin-top: 50px;
-  opacity: 50%;
-
+  margin-top: 2vmax;
+  opacity: 25%;
 }
 
 .aboot {
   color: whitesmoke;
-  font-size: medium;
+  font-size: 1vmin;
   text-align: right;
   margin-left: 10%;
   padding-top: 4%;

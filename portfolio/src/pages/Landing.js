@@ -29,7 +29,7 @@ class Landing extends Component {
                     />
                 </div>
 
-                <FooterBar className="App-logo-spin" />
+                <FooterBar />
             </div>
         );
     }
