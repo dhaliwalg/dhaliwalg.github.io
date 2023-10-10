@@ -1,14 +1,13 @@
 .grid {
-    position: absolute;
-    color: black;
-    padding-left: 20vmax;
-}
-
-.jb_card {
-    height: 33vmax;
+    position: fixed;
+    display: flex;
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .text {
-    padding-top: 90vmax;
-    font-size: large;
+    padding-top: 96vh;
+    font-size: 1.5vmax;
 }
