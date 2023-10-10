@@ -1,14 +1,14 @@
-.grid{
+.grid {
     position: absolute;
     color: black;
-    padding-left: 35vh;
+    padding-left: 20vmax;
 }
 
-.jb_card{
-    height: 27.5rem;
+.jb_card {
+    height: 33vmax;
 }
 
-.text{
-    padding-top: 90vh;
+.text {
+    padding-top: 90vmax;
     font-size: large;
 }

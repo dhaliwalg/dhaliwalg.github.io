@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar } from 'react-bootstrap';
-import './navbar.css';
 
 class NaviBarComponent extends React.Component {
   render() {
