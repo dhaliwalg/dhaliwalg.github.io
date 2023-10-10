@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   scroll-behavior: smooth;
-
+  font-size: 1.65vmax;
 }
 
 .App-logo {
