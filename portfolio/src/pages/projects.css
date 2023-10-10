@@ -1,8 +1,8 @@
 .grid {
     position: fixed;
     display: flex;
-    margin-left: 15vmin;
-    margin-right: 15vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
     overflow-x: hidden;
 }
 

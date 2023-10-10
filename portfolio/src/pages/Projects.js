@@ -20,8 +20,8 @@ class Classes extends Component {
     return (
       <div className="App-header">
         <div className="grid">
-          <MDBRow style={{ padding: '6.3vmin', maxHeight: '100vh', overflow: 'auto' }}>
-            <MDBCol md='3'>
+          <MDBRow style={{ padding: '6.5vmin', maxHeight: '100vh', overflow: 'auto' }}>
+            <MDBCol md='4'>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea href="https://github.com/MichaelG922/Smarternships" target="_blank">
                   <CardMedia
@@ -35,15 +35,15 @@ class Classes extends Component {
                       Smarternships
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      An Android application written in Kotlin with Firebase to store encrypted logins. The platform is
-                      similar to Fiverr, allowing students and companies to connect and fill jobs.
+                      An Android app in Kotlin with Firebase to store encrypted logins. The platform is
+                      like Fiverr, allowing students and companies to connect and fill jobs.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
             </MDBCol>
 
-            <MDBCol md='3'>
+            <MDBCol md='4'>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea href="https://github.com/dhaliwalg/320finalproj" target="_blank">
                   <CardMedia
@@ -65,7 +65,7 @@ class Classes extends Component {
               </Card>
             </MDBCol>
 
-            <MDBCol md='3'>
+            <MDBCol md='4'>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea href="https://github.com/dhaliwalg/tweaks" target="_blank">
                   <CardMedia
@@ -86,8 +86,8 @@ class Classes extends Component {
                 </CardActionArea>
               </Card>
             </MDBCol>
-
-            <MDBCol md='3'>
+            {/* 
+            <MDBCol md='4'>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea href="https://github.com/dhaliwalg/tweaks" target="_blank">
                   <CardMedia
@@ -107,7 +107,7 @@ class Classes extends Component {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </MDBCol>
+            </MDBCol> */}
           </MDBRow>
         </div>
 
