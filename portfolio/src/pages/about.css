@@ -19,7 +19,8 @@
 
 .pics {
     margin-top: 10vmin;
-    margin-left: 12vmin;
+    margin-left: 15vmin;
     /* padding-left: 12vmin; */
     clip-path: circle();
+    position: fixed;
 }
