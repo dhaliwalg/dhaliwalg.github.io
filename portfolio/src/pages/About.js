@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { FooterBar } from "../components/FooterBar";
 import pic3 from './imgs/pic3.JPG';
 import './about.css';
-import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 class About extends Component {
     render() {
