@@ -45,7 +45,7 @@ class Classes extends Component {
 
             <MDBCol md='4'>
               <Card sx={{ maxWidth: 320 }}>
-                <CardActionArea href="https://github.com/dhaliwalg/320finalproj" target="_blank">
+                <CardActionArea href="https://dhaliwalg.github.io/320finalproj/" target="_blank">
                   <CardMedia
                     component="img"
                     height="230"
