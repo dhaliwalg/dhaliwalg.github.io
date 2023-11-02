@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { FooterBar } from '../components/FooterBar';
 
 // const projects = [
 //   {
@@ -86,32 +87,11 @@ class Classes extends Component {
                 </CardActionArea>
               </Card>
             </MDBCol>
-            {/* 
-            <MDBCol md='4'>
-              <Card sx={{ maxWidth: 320 }}>
-                <CardActionArea href="https://github.com/dhaliwalg/tweaks" target="_blank">
-                  <CardMedia
-                    component="img"
-                    height="230"
-                    image="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      React Portfolio
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      A self-initiated project of building this web application using React, JavaScript, TypeScript,
-                      and other web utilities. Constantly updating as new features are learned.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </MDBCol> */}
           </MDBRow>
         </div>
 
         <p className="text">more projects on the way 😀</p>
+        <FooterBar />
       </div >
     )
   }
