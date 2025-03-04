@@ -1,9 +1,491 @@
-<html lang="en" style="background-color: black; color: wheat;">
-    <div style="color: white;">
-        <title>vapor's repo</title>
-        <h1>things have moved</h1>
-        <a href="https://dhaliwalg.vercel.app/">
-            <h2>Portfolio</h2>
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Typing Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            color: #f0f0f0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 10px;
+            text-align: center;
+            background-color: #000;
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            color: #512da8;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+        
+        .game-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .game-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .timer {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .mode-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .mode-btn {
+            background-color: transparent;
+            border: none;
+            color: #888;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .mode-btn.active {
+            color: #512da8;
+            font-weight: bold;
+        }
+        
+        .mode-btn:hover {
+            color: #fff;
+        }
+        
+        .typing-area {
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #000;
+            padding: 20px;
+            min-height: 150px;
+            position: relative;
+        }
+        
+        .word {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #888;
+        }
+        
+        .current-word {
+            color: #ccc;
+            text-decoration: underline;
+        }
+        
+        .typed-word {
+            color: #fff;
+        }
+        
+        .correct {
+            color: #4caf50;
+        }
+        
+        .incorrect {
+            color: #f44336;
+        }
+        
+        .input-area {
+            width: 100%;
+            background-color: #000;
+            padding: 10px 0;
+            display: flex;
+        }
+        
+        .prompt {
+            color: #512da8;
+            margin-right: 10px;
+        }
+        
+        #typing-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            flex-grow: 1;
+        }
+        
+        .start-prompt {
+            color: #888;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .results {
+            background-color: #000;
+            padding: 20px 0;
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .results-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #512da8;
+        }
+        
+        .result-item {
+            margin-bottom: 10px;
+        }
+        
+        .restart-btn {
+            background-color: transparent;
+            color: #512da8;
+            border: none;
+            padding: 10px 0;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .restart-btn:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .game-header {
+                flex-direction: column;
+            }
+            
+            .mode-buttons {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        new portfolio @
+        <a href="https://dhaliwalg.vercel.app/" class="portfolio-link">dhaliwalg.vercel.app</a>
     </div>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <div class="timer">0s</div>
+            <div class="mode-buttons">
+                <button class="mode-btn" data-time="15">15s</button>
+                <button class="mode-btn active" data-time="30">30s</button>
+                <button class="mode-btn" data-time="60">60s</button>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div>WPM: <span id="wpm">0</span> | Accuracy: <span id="accuracy">0%</span></div>
+        </div>
+        
+        <div class="typing-area" id="typing-area">
+            <div class="start-prompt">Select a mode and start typing...</div>
+        </div>
+        
+        <div class="input-area">
+            <span class="prompt">></span>
+            <input type="text" id="typing-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </div>
+        
+        <div class="results" id="results">
+            <div class="results-title">Test Results</div>
+            <div class="result-item">WPM: <span id="result-wpm">0</span></div>
+            <div class="result-item">Accuracy: <span id="result-accuracy">0%</span></div>
+            <div class="result-item">Correct Words: <span id="result-correct">0</span></div>
+            <div class="result-item">Incorrect Words: <span id="result-incorrect">0</span></div>
+            <button class="restart-btn" id="restart-btn">Restart Test</button>
+        </div>
+    </div>
+    
+    <script>
+        // Game elements
+        const typingArea = document.getElementById('typing-area');
+        const typingInput = document.getElementById('typing-input');
+        const modeButtons = document.querySelectorAll('.mode-btn');
+        const timerElement = document.querySelector('.timer');
+        const wpmElement = document.getElementById('wpm');
+        const accuracyElement = document.getElementById('accuracy');
+        const resultsElement = document.getElementById('results');
+        const resultWpmElement = document.getElementById('result-wpm');
+        const resultAccuracyElement = document.getElementById('result-accuracy');
+        const resultCorrectElement = document.getElementById('result-correct');
+        const resultIncorrectElement = document.getElementById('result-incorrect');
+        const restartButton = document.getElementById('restart-btn');
+        
+        // Word list - common English words
+        const wordsList = [
+            'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'I', 
+            'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 
+            'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 
+            'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 
+            'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me',
+            'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 
+            'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other', 
+            'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also', 
+            'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way', 
+            'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us'
+        ];
+        
+        // Game state
+        let gameTime = 30; // Default game time in seconds
+        let currentWordIndex = 0;
+        let correctWords = 0;
+        let incorrectWords = 0;
+        let timerInterval = null;
+        let timeRemaining = 0;
+        let testWords = [];
+        let gameActive = false;
+        
+        // Initialize game
+        function init() {
+            // Set up event listeners
+            modeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modeButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    gameTime = parseInt(button.getAttribute('data-time'));
+                    resetGame();
+                });
+            });
+            
+            typingInput.addEventListener('input', checkInput);
+            restartButton.addEventListener('click', resetGame);
+            
+            // Focus on input field
+            typingInput.focus();
+            
+            // Add instructions
+            const startPrompt = document.createElement('div');
+            startPrompt.className = 'start-prompt';
+            startPrompt.textContent = 'Select a mode and start typing...';
+            typingArea.insertAdjacentElement('beforebegin', startPrompt);
+            
+            // Generate initial words
+            generateWords();
+        }
+        
+        // Generate random words for the test
+        function generateWords() {
+            testWords = [];
+            for (let i = 0; i < 100; i++) {
+                const randomIndex = Math.floor(Math.random() * wordsList.length);
+                testWords.push(wordsList[randomIndex]);
+            }
+            
+            displayWords();
+        }
+        
+        // Display words in the typing area
+        function displayWords() {
+            typingArea.innerHTML = '';
+            
+            testWords.forEach((word, index) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.textContent = word;
+                wordSpan.className = 'word';
+                
+                if (index === currentWordIndex) {
+                    wordSpan.classList.add('current-word');
+                } else if (index < currentWordIndex) {
+                    wordSpan.classList.add('typed-word');
+                }
+                
+                typingArea.appendChild(wordSpan);
+            });
+        }
+        
+        // Start the game timer
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            
+            timeRemaining = gameTime;
+            timerElement.textContent = `${timeRemaining}s`;
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timerElement.textContent = `${timeRemaining}s`;
+                
+                // Update WPM in real-time
+                updateStats();
+                
+                if (timeRemaining <= 0) {
+                    endGame();
+                }
+            }, 1000);
+        }
+        
+        // Check input against current word
+        function checkInput() {
+            if (!gameActive && typingInput.value.length > 0) {
+                gameActive = true;
+                startTimer();
+                document.querySelector('.start-prompt')?.remove();
+            }
+            
+            const currentWord = testWords[currentWordIndex];
+            const currentInput = typingInput.value;
+            
+            // If user presses space, check the word
+            if (currentInput.endsWith(' ')) {
+                const enteredWord = currentInput.trim();
+                
+                const wordElements = typingArea.querySelectorAll('.word');
+                const currentWordElement = wordElements[currentWordIndex];
+                
+                if (enteredWord === currentWord) {
+                    currentWordElement.classList.add('correct');
+                    correctWords++;
+                } else {
+                    currentWordElement.classList.add('incorrect');
+                    incorrectWords++;
+                }
+                
+                currentWordIndex++;
+                
+                // If we've reached the end of the current words, generate more
+                if (currentWordIndex >= testWords.length) {
+                    currentWordIndex = 0;
+                    generateWords();
+                } else {
+                    // Mark the next word as current
+                    wordElements[currentWordIndex].classList.add('current-word');
+                }
+                
+                // Clear input
+                typingInput.value = '';
+                
+                // Update stats
+                updateStats();
+            }
+        }
+        
+        // Update statistics (WPM and accuracy)
+        function updateStats() {
+            if (timeRemaining === gameTime || (correctWords === 0 && incorrectWords === 0)) {
+                wpmElement.textContent = '0';
+                accuracyElement.textContent = '0%';
+                return;
+            }
+            
+            // Calculate time elapsed in minutes
+            const timeElapsed = (gameTime - timeRemaining) / 60;
+            
+            // WPM calculation: (correctWords / timeElapsedInMinutes)
+            const wpm = timeElapsed > 0 ? Math.round(correctWords / timeElapsed) : 0;
+            
+            // Accuracy calculation
+            const totalWords = correctWords + incorrectWords;
+            const accuracy = totalWords > 0 ? Math.round((correctWords / totalWords) * 100) : 0;
+            
+            wpmElement.textContent = wpm;
+            accuracyElement.textContent = `${accuracy}%`;
+        }
+        
+        // End the game and show results
+        function endGame() {
+            clearInterval(timerInterval);
+            gameActive = false;
+            
+            // Calculate final stats
+            const timeElapsed = gameTime / 60; // in minutes
+            const wpm = Math.round(correctWords / timeElapsed);
+            const totalWords = correctWords + incorrectWords;
+            const accuracy = totalWords > 0 ? Math.round((correctWords / totalWords) * 100) : 0;
+            
+            // Update results screen
+            resultWpmElement.textContent = wpm;
+            resultAccuracyElement.textContent = `${accuracy}%`;
+            resultCorrectElement.textContent = correctWords;
+            resultIncorrectElement.textContent = incorrectWords;
+            
+            // Show results
+            typingArea.style.display = 'none';
+            document.querySelector('.input-area').style.display = 'none';
+            resultsElement.style.display = 'block';
+        }
+        
+        // Reset the game
+        function resetGame() {
+            // Reset game state
+            currentWordIndex = 0;
+            correctWords = 0;
+            incorrectWords = 0;
+            gameActive = false;
+            
+            // Clear timer
+            clearInterval(timerInterval);
+            timeRemaining = gameTime;
+            timerElement.textContent = `${gameTime}s`;
+            
+            // Reset UI
+            typingArea.style.display = 'block';
+            document.querySelector('.input-area').style.display = 'flex';
+            resultsElement.style.display = 'none';
+            
+            // Reset stats
+            wpmElement.textContent = '0';
+            accuracyElement.textContent = '0%';
+            
+            // Clear input
+            typingInput.value = '';
+            
+            // Generate new words
+            generateWords();
+            
+            // Add instructions above typing area if not already present
+            if (!document.querySelector('.start-prompt')) {
+                const startPrompt = document.createElement('div');
+                startPrompt.className = 'start-prompt';
+                startPrompt.textContent = 'Select a mode and start typing...';
+                typingArea.insertAdjacentElement('beforebegin', startPrompt);
+            }
+            
+            // Focus input
+            typingInput.focus();
+        }
+        
+        // Initialize when the page loads
+        window.onload = init;
+    </script>
+</body>
 </html>
